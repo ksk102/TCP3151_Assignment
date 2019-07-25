@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!-- This report is to record the items that are reported LOST to the Lost and Found Station -->
+
+<!-- External DTD to be added here -->
 
 <lostReport>
-  <item id="1001">
-    <status>Lost</status>
-    <type>Lost</type>
-    <description>Student ID</description>
+  <item id="1001"> <!-- indicate an item that have been lost; id incidate the primary key -->
+    <status>Open</status> <!-- Open: Item is awaiting to be found and returned; Closed: Item have been found and returned -->
+    <description>Student ID</description> <!-- short description of the item lost -->
 
+    <!-- when the item is reported to the lost and found station -->
     <report:datetime xmlns:report="http://www.w3.org/xml/report/">
       <report:date year="2019" month="07" date="02" />
       <report:time hour="17" minute="26" />
     </report:datetime>
 
-    <claim:datetime xmlns:report="http://www.w3.org/xml/claim/">
-      <claim:date year="" month="" date="" />
-      <claim:time hour="" minute="" />
-    </claim:datetime>
-
-    <location>MSMX0001</location>
-
+    <!-- when the item is suspected lost -->
     <lost:datetime xmlns:report="http://www.w3.org/xml/lost/">
       <lost:dateFrom year="2019" month="07" date="02" />
       <lost:dateTo year="2019" month="07" date="02" />
@@ -25,10 +22,21 @@
       <lost:timeTo hour="16" minute="00" />
     </lost:datetime>
 
+    <!-- when the item is being claimed by its owner -->
+    <claim:datetime xmlns:report="http://www.w3.org/xml/claim/">
+      <claim:date year="" month="" date="" />
+      <claim:time hour="" minute="" />
+    </claim:datetime>
+
+    <!-- where the item is suspected lost -->
+    <location>MSMX0001</location>
+
+    <!-- detail description of the item lost -->
     <detail> <![CDATA[
     Student Id: 1131119882
     ]]></detail>
 
+    <!-- item lost is reported by this person -->
     <reportBy>
       <name>
         <firstName>Kah Siang</firstName>
@@ -39,6 +47,7 @@
       <id>1131119882</id>
     </reportBy>
 
+    <!-- item is being found by this person -->
     <returnBy>
       <name>
         <firstName></firstName>
@@ -52,7 +61,6 @@
 
   <item id="1002">
     <status>Closed</status>
-    <type>Lost</type>
     <description>Wallet</description>
 
     <report:datetime xmlns:report="http://www.w3.org/xml/report/">
