@@ -68,6 +68,13 @@
       <report:date year="2019" month="07" date="03" />
       <report:time hour="11" minute="59" />
     </report:datetime>
+		
+    <lost:datetime xmlns:lost="http://www.w3.org/xml/lost/">
+      <lost:dateFrom year="2019" month="07" date="03" />
+      <lost:dateTo year="2019" month="07" date="03" />
+      <lost:timeFrom hour="08" minute="00" />
+      <lost:timeTo hour="11" minute="30" />
+    </lost:datetime>
 
     <claim:datetime xmlns:claim="http://www.w3.org/xml/claim/">
       <claim:date year="2019" month="07" date="04" />
@@ -75,13 +82,6 @@
     </claim:datetime>
 
     <location>MSMX0001</location>
-
-    <lost:datetime xmlns:lost="http://www.w3.org/xml/lost/">
-      <lost:dateFrom year="2019" month="07" date="03" />
-      <lost:dateTo year="2019" month="07" date="03" />
-      <lost:timeFrom hour="08" minute="00" />
-      <lost:timeTo hour="11" minute="30" />
-    </lost:datetime>
 
     <detail> <![CDATA[
     Black colour, around RM300 inside, include student id - 1151104900, ic - 980101-01-0001, driving license, and aeon member card
