@@ -1,5 +1,5 @@
 <!ELEMENT lostReport (item*) >
-<!ELEMENT item (status, description, report:datetime, lost:datetime, claim:datetime, location, detail, reportBy, returnBy) >
+<!ELEMENT item (status, description, report:datetime, lost:datetime, claim:datetime, (location+), detail, reportBy, returnBy) >
 <!ELEMENT status (EMPTY) >
 <!ELEMENT description (#PCDATA) >
 <!ELEMENT report:datetime (report:date, report:time) >
