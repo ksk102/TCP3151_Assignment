@@ -1,0 +1,67 @@
+<!ELEMENT lostReport (item*) >
+<!ELEMENT item (status, description, report:datetime, lost:datetime, claim:datetime, location, detail, reportBy, returnBy) >
+<!ELEMENT status (EMPTY) >
+<!ELEMENT description (#PCDATA) >
+<!ELEMENT report:datetime (report:date, report:time) >
+<!ELEMENT report:date (EMPTY) >
+<!ELEMENT report:time (EMPTY) >
+<!ELEMENT lost:datetime (lost:dateFrom, lost:dateTo, lost:timeFrom, lost:timeTo) >
+<!ELEMENT lost:dateFrom (EMPTY) >
+<!ELEMENT lost:dateTo (EMPTY) >
+<!ELEMENT lost:timeFrom (EMPTY) >
+<!ELEMENT lost:timeTo (EMPTY) >
+<!ELEMENT claim:datetime (claim:date, claim:time) >
+<!ELEMENT claim:date (EMPTY) >
+<!ELEMENT claim:time (EMPTY) >
+<!ELEMENT location (#PCDATA) >
+<!ELEMENT detail (#PCDATA) >
+<!ELEMENT reportBy (name, email, phone, id) >
+<!ELEMENT returnBy (name, email, phone, id) >
+<!ELEMENT name (firstName, lastName) >
+<!ELEMENT firstName (#PCDATA) >
+<!ELEMENT lastName (#PCDATA) >
+<!ELEMENT email (#PCDATA) >
+<!ELEMENT phone (#PCDATA) >
+<!ELEMENT id (#PCDATA) >
+
+<!ATTLIST item id ID #REQUIRED >
+<!ATTLIST status choice (Open | Found | Closed) #REQUIRED >
+<!ATTLIST report:datetime xmlns:report CDATA #FIXED "http://www.w3.org/xml/report/">
+<!ATTLIST report:date 
+  year CDATA #REQUIRED
+  month CDATA #REQUIRED
+  date CDATA #REQUIRED
+>
+<!ATTLIST report:time 
+  hour CDATA #REQUIRED
+  minute CDATA #REQUIRED
+>
+<!ATTLIST lost:datetime xmlns:lost CDATA #FIXED "http://www.w3.org/xml/lost/">
+<!ATTLIST lost:dateFrom
+  year CDATA #REQUIRED
+  month CDATA #REQUIRED
+  date CDATA #REQUIRED
+>
+<!ATTLIST lost:dateTo
+  year CDATA #REQUIRED
+  month CDATA #REQUIRED
+  date CDATA #REQUIRED
+>
+<!ATTLIST lost:timeFrom
+  hour CDATA #REQUIRED
+  minute CDATA #REQUIRED
+>
+<!ATTLIST lost:timeTo
+  hour CDATA #REQUIRED
+  minute CDATA #REQUIRED
+>
+<!ATTLIST claim:datetime xmlns:claim CDATA #FIXED "http://www.w3.org/xml/claim/">
+<!ATTLIST claim:date 
+  year CDATA #REQUIRED
+  month CDATA #REQUIRED
+  date CDATA #REQUIRED
+>
+<!ATTLIST claim:time 
+  hour CDATA #REQUIRED
+  minute CDATA #REQUIRED
+>

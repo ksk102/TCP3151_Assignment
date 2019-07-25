@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <!-- This report is to record the items that are reported LOST to the Lost and Found Station -->
 
-<!-- External DTD to be added here -->
+<!-- External DTD -->
+<!DOCTYPE lostReport SYSTEM "LostItemReport.dtd" >
 
 <lostReport>
   <item id="1001"> <!-- indicate an item that have been lost; id incidate the primary key -->
-    <status>Open</status> <!-- Open: Item is awaiting to be found and returned; Found: Item have been found and awaiting to be returned; Closed: Item have been found and returned -->
+    <status choice="Open" /> <!-- Open: Item is awaiting to be found and returned; Found: Item have been found and awaiting to be returned; Closed: Item have been found and returned -->
     <description>Student ID</description> <!-- short description of the item lost -->
 
     <!-- when the item is reported to the lost and found station -->
@@ -60,7 +61,7 @@
   </item>
 
   <item id="1002">
-    <status>Closed</status>
+    <status choice="Closed" />
     <description>Wallet</description>
 
     <report:datetime xmlns:report="http://www.w3.org/xml/report/">

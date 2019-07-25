@@ -1,11 +1,73 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!-- This report is to record the items that are reported FOUND to the Lost and Found Station -->
 
-<!-- Internal DTD to be added here -->
+<!-- Internal DTD -->
+<!DOCTYPE foundReport [
+
+<!ELEMENT foundReport (item*) >
+<!ELEMENT item (status, description, report:datetime, found:datetime, claim:datetime, location, detail, reportBy, claimBy) >
+<!ELEMENT status (EMPTY) >
+<!ELEMENT description (#PCDATA) >
+<!ELEMENT report:datetime (report:date, report:time) >
+<!ELEMENT report:date (EMPTY) >
+<!ELEMENT report:time (EMPTY) >
+<!ELEMENT found:datetime (found:date, found:time) >
+<!ELEMENT found:date (EMPTY) >
+<!ELEMENT found:time (EMPTY) >
+<!ELEMENT claim:datetime (claim:date, claim:time) >
+<!ELEMENT claim:date (EMPTY) >
+<!ELEMENT claim:time (EMPTY) >
+<!ELEMENT location (#PCDATA) >
+<!ELEMENT detail (#PCDATA) >
+<!ELEMENT reportBy (name, email, phone, id) >
+<!ELEMENT claimBy (name, email, phone, id) >
+<!ELEMENT name (firstName, lastName) >
+<!ELEMENT firstName (#PCDATA) >
+<!ELEMENT lastName (#PCDATA) >
+<!ELEMENT email (#PCDATA) >
+<!ELEMENT phone (#PCDATA) >
+<!ELEMENT id (#PCDATA) >
+
+<!ATTLIST item id ID #REQUIRED >
+<!ATTLIST status choice (Open | Closed) #REQUIRED >
+<!ATTLIST report:datetime xmlns:report CDATA #FIXED "http://www.w3.org/xml/report/">
+<!ATTLIST report:date 
+  year CDATA #REQUIRED
+  month CDATA #REQUIRED
+  date CDATA #REQUIRED
+>
+<!ATTLIST report:time 
+  hour CDATA #REQUIRED
+  minute CDATA #REQUIRED
+>
+
+<!ATTLIST found:datetime xmlns:found CDATA #FIXED "http://www.w3.org/xml/found/">
+<!ATTLIST found:date 
+  year CDATA #REQUIRED
+  month CDATA #REQUIRED
+  date CDATA #REQUIRED
+>
+<!ATTLIST found:time 
+  hour CDATA #REQUIRED
+  minute CDATA #REQUIRED
+>
+
+<!ATTLIST claim:datetime xmlns:claim CDATA #FIXED "http://www.w3.org/xml/claim/">
+<!ATTLIST claim:date 
+  year CDATA #REQUIRED
+  month CDATA #REQUIRED
+  date CDATA #REQUIRED
+>
+<!ATTLIST claim:time 
+  hour CDATA #REQUIRED
+  minute CDATA #REQUIRED
+>
+
+]>
 
 <foundReport>
   <item id="2001"> <!-- indicate an item that have been found; id incidate the primary key -->
-    <status>Open</status> <!-- Open: Item is awaiting to be claimed; Closed: Item have been claimed -->
+    <status choice="Open" /> <!-- Open: Item is awaiting to be claimed; Closed: Item have been claimed -->
     <description>Watches</description> <!-- short description of the item found -->
 
     <!-- when the item is reported to the lost and found station -->
