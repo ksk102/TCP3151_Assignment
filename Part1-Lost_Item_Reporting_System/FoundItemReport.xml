@@ -6,17 +6,17 @@
 
 <!ELEMENT foundReport (item*) >
 <!ELEMENT item (status, description, report:datetime, found:datetime, claim:datetime, location, detail, reportBy, claimBy) >
-<!ELEMENT status (EMPTY) >
+<!ELEMENT status EMPTY >
 <!ELEMENT description (#PCDATA) >
 <!ELEMENT report:datetime (report:date, report:time) >
-<!ELEMENT report:date (EMPTY) >
-<!ELEMENT report:time (EMPTY) >
+<!ELEMENT report:date EMPTY >
+<!ELEMENT report:time EMPTY >
 <!ELEMENT found:datetime (found:date, found:time) >
-<!ELEMENT found:date (EMPTY) >
-<!ELEMENT found:time (EMPTY) >
+<!ELEMENT found:date EMPTY >
+<!ELEMENT found:time EMPTY >
 <!ELEMENT claim:datetime (claim:date, claim:time) >
-<!ELEMENT claim:date (EMPTY) >
-<!ELEMENT claim:time (EMPTY) >
+<!ELEMENT claim:date EMPTY >
+<!ELEMENT claim:time EMPTY >
 <!ELEMENT location (#PCDATA) >
 <!ELEMENT detail (#PCDATA) >
 <!ELEMENT reportBy (name, email, phone, id) >
