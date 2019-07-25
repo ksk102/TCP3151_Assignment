@@ -15,13 +15,13 @@
     </report:datetime>
 
     <!-- when the item is being found by the reporting person -->
-    <found:datetime xmlns:report="http://www.w3.org/xml/found/">
+    <found:datetime xmlns:found="http://www.w3.org/xml/found/">
       <found:date year="2019" month="07" date="03" />
       <found:time hour="17" minute="00" />
     </found:datetime>
 
     <!-- when the item is being claimed by its owner -->
-    <claim:datetime xmlns:report="http://www.w3.org/xml/claim/">
+    <claim:datetime xmlns:claim="http://www.w3.org/xml/claim/">
       <claim:date year="" month="" date="" />
       <claim:time hour="" minute="" />
     </claim:datetime>

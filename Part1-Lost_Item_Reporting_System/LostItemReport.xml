@@ -15,7 +15,7 @@
     </report:datetime>
 
     <!-- when the item is suspected lost -->
-    <lost:datetime xmlns:report="http://www.w3.org/xml/lost/">
+    <lost:datetime xmlns:lost="http://www.w3.org/xml/lost/">
       <lost:dateFrom year="2019" month="07" date="02" />
       <lost:dateTo year="2019" month="07" date="02" />
       <lost:timeFrom hour="14" minute="00" />
@@ -23,7 +23,7 @@
     </lost:datetime>
 
     <!-- when the item is being claimed by its owner -->
-    <claim:datetime xmlns:report="http://www.w3.org/xml/claim/">
+    <claim:datetime xmlns:claim="http://www.w3.org/xml/claim/">
       <claim:date year="" month="" date="" />
       <claim:time hour="" minute="" />
     </claim:datetime>
@@ -68,14 +68,14 @@
       <report:time hour="11" minute="59" />
     </report:datetime>
 
-    <claim:datetime xmlns:report="http://www.w3.org/xml/claim/">
+    <claim:datetime xmlns:claim="http://www.w3.org/xml/claim/">
       <claim:date year="2019" month="07" date="04" />
       <claim:time hour="08" minute="04" />
     </claim:datetime>
 
     <location>MSMX0001</location>
 
-    <lost:datetime xmlns:report="http://www.w3.org/xml/lost/">
+    <lost:datetime xmlns:lost="http://www.w3.org/xml/lost/">
       <lost:dateFrom year="2019" month="07" date="03" />
       <lost:dateTo year="2019" month="07" date="03" />
       <lost:timeFrom hour="08" minute="00" />
