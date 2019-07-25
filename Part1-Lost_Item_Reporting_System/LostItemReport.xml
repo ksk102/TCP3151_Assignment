@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<lostReport>
+  <item id="1001">
+    <status>Lost</status>
+    <type>Lost</type>
+    <description>Student ID</description>
+
+    <report:datetime xmlns:report="http://www.w3.org/xml/report/">
+      <report:date year="2019" month="07" date="02" />
+      <report:time hour="17" minute="26" />
+    </report:datetime>
+
+    <claim:datetime xmlns:report="http://www.w3.org/xml/claim/">
+      <claim:date year="" month="" date="" />
+      <claim:time hour="" minute="" />
+    </claim:datetime>
+
+    <location>MSMX0001</location>
+
+    <lost:datetime xmlns:report="http://www.w3.org/xml/lost/">
+      <lost:dateFrom year="2019" month="07" date="02" />
+      <lost:dateTo year="2019" month="07" date="02" />
+      <lost:timeFrom hour="14" minute="00" />
+      <lost:timeTo hour="16" minute="00" />
+    </lost:datetime>
+
+    <detail> <![CDATA[
+    Student Id: 1131119882
+    ]]></detail>
+
+    <reportBy>
+      <name>
+        <firstName>Kah Siang</firstName>
+        <lastName>Koh</lastName>
+      </name>
+      <email>kahsiang95@hotmail.com</email>
+      <phone>017-6815218</phone>
+      <id>1131119882</id>
+    </reportBy>
+
+    <returnBy>
+      <name>
+        <firstName></firstName>
+        <lastName></lastName>
+      </name>
+      <email></email>
+      <phone></phone>
+      <id></id>
+    </returnBy>
+  </item>
+
+  <item id="1002">
+    <status>Closed</status>
+    <type>Lost</type>
+    <description>Wallet</description>
+
+    <report:datetime xmlns:report="http://www.w3.org/xml/report/">
+      <report:date year="2019" month="07" date="03" />
+      <report:time hour="11" minute="59" />
+    </report:datetime>
+
+    <claim:datetime xmlns:report="http://www.w3.org/xml/claim/">
+      <claim:date year="2019" month="07" date="04" />
+      <claim:time hour="08" minute="04" />
+    </claim:datetime>
+
+    <location>MSMX0001</location>
+
+    <lost:datetime xmlns:report="http://www.w3.org/xml/lost/">
+      <lost:dateFrom year="2019" month="07" date="03" />
+      <lost:dateTo year="2019" month="07" date="03" />
+      <lost:timeFrom hour="08" minute="00" />
+      <lost:timeTo hour="11" minute="30" />
+    </lost:datetime>
+
+    <detail> <![CDATA[
+    Black colour, around RM300 inside, include student id - 1151104900, ic - 980101-01-0001, driving license, and aeon member card
+    ]]></detail>
+
+    <reportBy>
+      <name>
+        <firstName>Kean Wah</firstName>
+        <lastName>Cheng</lastName>
+      </name>
+      <email>1151104900@student.mmu.edu.my</email>
+      <phone>0129350714</phone>
+      <id>1151104900</id>
+    </reportBy>
+
+    <returnBy>
+      <name>
+        <firstName>Daphne</firstName>
+        <lastName>Bunga Dwiputriane</lastName>
+      </name>
+      <email>1151105086@student.mmu.edu.my</email>
+      <phone>017-6356898</phone>
+      <id>1151105086</id>
+    </returnBy>
+  </item>
+  
+</lostReport>
