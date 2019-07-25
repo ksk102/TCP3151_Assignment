@@ -5,7 +5,7 @@
 
 <lostReport>
   <item id="1001"> <!-- indicate an item that have been lost; id incidate the primary key -->
-    <status>Open</status> <!-- Open: Item is awaiting to be found and returned; Closed: Item have been found and returned -->
+    <status>Open</status> <!-- Open: Item is awaiting to be found and returned; Found: Item have been found and awaiting to be returned; Closed: Item have been found and returned -->
     <description>Student ID</description> <!-- short description of the item lost -->
 
     <!-- when the item is reported to the lost and found station -->
