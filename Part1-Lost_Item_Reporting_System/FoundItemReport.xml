@@ -66,7 +66,7 @@
 ]>
 
 <foundReport>
-  <item id="2001"> <!-- indicate an item that have been found; id incidate the primary key -->
+  <item id="_2001"> <!-- indicate an item that have been found; id incidate the primary key -->
     <status choice="Open" /> <!-- Open: Item is awaiting to be claimed; Closed: Item have been claimed -->
     <description>Watches</description> <!-- short description of the item found -->
 
