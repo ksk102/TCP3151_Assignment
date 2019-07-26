@@ -66,6 +66,7 @@
 ]>
 
 <foundReport>
+
   <item id="F2001"> <!-- indicate an item that have been found; id incidate the primary key -->
     <status choice="Open" /> <!-- Open: Item is awaiting to be claimed; Closed: Item have been claimed -->
     <description>Watches</description> <!-- short description of the item found -->
@@ -119,4 +120,112 @@
       <id></id>
     </claimBy>
   </item>
+
+  <item id="F2002"> <!-- indicate an item that have been found; id incidate the primary key -->
+    <status choice="Closed" /> <!-- Open: Item is awaiting to be claimed; Closed: Item have been claimed -->
+    <description>A book with the title, "Sapiens"</description> <!-- short description of the item found -->
+
+    <!-- when the item is reported to the lost and found station -->
+    <report:datetime xmlns:report="http://www.w3.org/xml/report/">
+      <report:date year="2019" month="06" date="03" />
+      <report:time hour="13" minute="21" />
+    </report:datetime>
+
+    <!-- when the item is being found by the reporting person -->
+    <found:datetime xmlns:found="http://www.w3.org/xml/found/">
+      <found:date year="2019" month="06" date="03" />
+      <found:time hour="14" minute="00" />
+    </found:datetime>
+
+    <!-- when the item is being claimed by its owner -->
+    <claim:datetime xmlns:claim="http://www.w3.org/xml/claim/">
+      <claim:date year="2019" month="06" date="04" />
+      <claim:time hour="11" minute="12" />
+    </claim:datetime>
+
+    <!-- where the item is being found by the reporting person -->
+    <location>Just Want Cafe</location>
+
+    <!-- detail description of the item found -->
+    <detail> <![CDATA[
+    A book by Yuval Noah Harari.
+    The owner's name is written on the cover of the book -- "Enzo Cheng". 
+    ]]></detail>
+
+    <!-- item found is reported by this person -->
+    <reportBy>
+      <name>
+        <firstName>Daphne</firstName>
+        <lastName>Flower</lastName>
+      </name>
+      <email>Dflower@hotmail.com</email>
+      <phone>012-9450002</phone>
+      <id>1151103434</id>
+    </reportBy>
+
+    <!-- item is being claimed by this person -->
+    <claimBy>
+      <name>
+        <firstName>Enzo</firstName>
+        <lastName>Cheng</lastName>
+      </name>
+      <email>enzocheng977@hotmail.com</email>
+      <phone>013-3333333</phone>
+      <id>1151010001</id>
+    </claimBy>
+  </item>
+
+<item id="F2003"> <!-- indicate an item that have been found; id incidate the primary key -->
+    <status choice="Open" /> <!-- Open: Item is awaiting to be claimed; Closed: Item have been claimed -->
+    <description>A silver scientific calculator with a name tag --"Andrew Wang 1131140099"</description> <!-- short description of the item found -->
+
+    <!-- when the item is reported to the lost and found station -->
+    <report:datetime xmlns:report="http://www.w3.org/xml/report/">
+      <report:date year="2019" month="07" date="01" />
+      <report:time hour="14" minute="21" />
+    </report:datetime>
+
+    <!-- when the item is being found by the reporting person -->
+    <found:datetime xmlns:found="http://www.w3.org/xml/found/">
+      <found:date year="2019" month="07" date="01" />
+      <found:time hour="16" minute="13" />
+    </found:datetime>
+
+    <!-- when the item is being claimed by its owner -->
+    <claim:datetime xmlns:claim="http://www.w3.org/xml/claim/">
+      <claim:date year="2019" month="07" date="01" />
+      <claim:time hour="18" minute="00" />
+    </claim:datetime>
+
+    <!-- where the item is being found by the reporting person -->
+    <location>One of the tables on second floor of the library</location>
+
+    <!-- detail description of the item found -->
+    <detail> <![CDATA[
+    A new scientic calculator with a name tag writting, "Andrew Wong 1131140099" 
+    ]]></detail>
+
+    <!-- item found is reported by this person -->
+    <reportBy>
+      <name>
+        <firstName>Kah Siang</firstName>
+        <lastName>Koh</lastName>
+      </name>
+      <email>KS123@hotmail.com</email>
+      <phone>012-9330002</phone>
+      <id>1120010022</id>
+    </reportBy>
+
+    <!-- item is being claimed by this person -->
+    <claimBy>
+      <name>
+        <firstName>Andrew</firstName>
+        <lastName>Wang</lastName>
+      </name>
+      <email>wang8090@hotmail.com</email>
+      <phone>013-3334443</phone>
+      <id>1131140099</id>
+    </claimBy>
+  </item>
+
 </foundReport>
