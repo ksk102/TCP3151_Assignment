@@ -4,6 +4,9 @@
 <!-- External DTD -->
 <!DOCTYPE lostReport SYSTEM "LostItemReport.dtd" >
 
+<!-- Link to XSL -->
+<?xml-stylesheet type="text/xsl" href="ListOfLostItem.xsl" ?>
+
 <lostReport>
   <item id="L1001"> <!-- indicate an item that have been lost; id incidate the primary key -->
     <status choice="Open" /> <!-- Open: Item is awaiting to be found and returned; Found: Item have been found and awaiting to be returned; Closed: Item have been found and returned -->
@@ -44,7 +47,7 @@
         <lastName>Koh</lastName>
       </name>
       <email>kahsiang95@hotmail.com</email>
-      <phone>017-6815218</phone>
+      <phone>0176815218</phone>
       <id>1131119882</id>
     </reportBy>
 
