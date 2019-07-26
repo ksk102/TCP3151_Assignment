@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <!-- This report is to record the items that are reported FOUND to the Lost and Found Station -->
 
+<!-- Link to XSL -->
+<?xml-stylesheet type="text/xsl" href="ItemTobeClaimed.xsl" ?>
+
 <!-- Internal DTD -->
 <!DOCTYPE foundReport [
 
