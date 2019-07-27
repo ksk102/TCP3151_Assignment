@@ -86,7 +86,11 @@
             <td>
               <xsl:value-of select="lost:datetime/lost:dateTo/@year" />-<xsl:value-of select="lost:datetime/lost:dateTo/@month" />-<xsl:value-of select="lost:datetime/lost:dateTo/@date" />@<xsl:value-of select="lost:datetime/lost:timeTo/@hour" />:<xsl:value-of select="lost:datetime/lost:timeTo/@minute" /> 
             </td>
-            <td><xsl:value-of select="location" /></td>
+            <td>
+              <xsl:for-each select="locations/location">
+                -<xsl:value-of select="." /><br/>
+              </xsl:for-each>
+            </td>
             <td><xsl:value-of select="detail" /></td>
             <td><xsl:value-of select="reportBy/name/firstName" /></td>
             <td><xsl:value-of select="reportBy/email" /></td>

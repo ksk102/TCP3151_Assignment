@@ -33,7 +33,10 @@
     </claim:datetime>
 
     <!-- where the item is suspected lost -->
-    <location>MSMX0001</location>
+    <locations>
+      <location>MSMX0001</location>
+      <location>CLC Concourse</location>
+    </locations>
 
     <!-- detail description of the item lost -->
     <detail> <![CDATA[
@@ -83,8 +86,10 @@
       <claim:date year="2019" month="07" date="04" />
       <claim:time hour="08" minute="04" />
     </claim:datetime>
-
-    <location>MSMX0001</location>
+    
+    <locations>
+      <location>MSMX0001</location>
+    </locations>
 
     <detail> <![CDATA[
     Black colour, around RM300 inside, include student id - 1151104900, ic - 980101-01-0001, driving license, and aeon member card
@@ -108,6 +113,328 @@
       <email>1151105086@student.mmu.edu.my</email>
       <phone>017-6356898</phone>
       <id>1151105086</id>
+    </returnBy>
+  </item>
+
+  <item id="L1003"> <!-- indicate an item that have been lost; id incidate the primary key -->
+    <status choice="Open" /> <!-- Open: Item is awaiting to be found and returned; Found: Item have been found and awaiting to be returned; Closed: Item have been found and returned -->
+    <description>Necklace</description> <!-- short description of the item lost -->
+
+    <!-- when the item is reported to the lost and found station -->
+    <report:datetime xmlns:report="http://www.w3.org/xml/report/">
+      <report:date year="2019" month="07" date="09" />
+      <report:time hour="11" minute="30" />
+    </report:datetime>
+
+    <!-- when the item is suspected lost -->
+    <lost:datetime xmlns:lost="http://www.w3.org/xml/lost/">
+      <lost:dateFrom year="2019" month="07" date="09" />
+      <lost:dateTo year="2019" month="07" date="09" />
+      <lost:timeFrom hour="09" minute="00" />
+      <lost:timeTo hour="11" minute="00" />
+    </lost:datetime>
+
+    <!-- when the item is being claimed by its owner -->
+    <claim:datetime xmlns:claim="http://www.w3.org/xml/claim/">
+      <claim:date year="" month="" date="" />
+      <claim:time hour="" minute="" />
+    </claim:datetime>
+
+    <!-- where the item is suspected lost -->
+    <locations>
+      <location>MAMR4020</location>
+    </locations>
+
+    <!-- detail description of the item lost -->
+    <detail> <![CDATA[
+    Necklace Colour - Silver, Necklace Symbol - Cross, Necklace Length - Short
+    ]]></detail>
+
+    <!-- item lost is reported by this person -->
+    <reportBy>
+      <name>
+        <firstName>Mary Louise</firstName>
+        <lastName>Wright</lastName>
+      </name>
+      <email>maryloui@gmail.com</email>
+      <phone>0103456789</phone>
+      <id>118120212</id>
+    </reportBy>
+
+    <!-- item is being found by this person -->
+    <returnBy>
+      <name>
+        <firstName></firstName>
+        <lastName></lastName>
+      </name>
+      <email></email>
+      <phone></phone>
+      <id></id>
+    </returnBy>
+  </item>
+  
+  <item id="L1004">
+    <status choice="Found" />
+    <description>Laptop Bag</description>
+
+    <report:datetime xmlns:report="http://www.w3.org/xml/report/">
+      <report:date year="2019" month="07" date="16" />
+      <report:time hour="12" minute="50" />
+    </report:datetime>
+		
+    <lost:datetime xmlns:lost="http://www.w3.org/xml/lost/">
+      <lost:dateFrom year="2019" month="07" date="16" />
+      <lost:dateTo year="2019" month="07" date="16" />
+      <lost:timeFrom hour="11" minute="00" />
+      <lost:timeTo hour="12" minute="30" />
+    </lost:datetime>
+
+    <claim:datetime xmlns:claim="http://www.w3.org/xml/claim/">
+      <claim:date year="" month="" date="" />
+      <claim:time hour="" minute="" />
+    </claim:datetime>
+
+    <locations>
+      <location>MSMX2008</location>
+    </locations>
+
+    <detail> <![CDATA[
+    Black colour, messenger bag, Laptop brand - Dell, Laptop Username - Amabella Klein, Laptop Colour - Grey
+    ]]></detail>
+
+    <reportBy>
+      <name>
+        <firstName>Amabella</firstName>
+        <lastName>Klein</lastName>
+      </name>
+      <email>amabellaklein21@gmail.com</email>
+      <phone>0144705658</phone>
+      <id>1151105020</id>
+    </reportBy>
+
+    <returnBy>
+      <name>
+        <firstName>Chang He</firstName>
+        <lastName>Wong</lastName>
+      </name>
+      <email>1151105293@student.mmu.edu.my</email>
+      <phone>0129161580</phone>
+      <id>1151105293</id>
+    </returnBy>
+  </item>
+  
+
+  <item id="L1005"> <!-- indicate an item that have been lost; id incidate the primary key -->
+    <status choice="Open" /> <!-- Open: Item is awaiting to be found and returned; Found: Item have been found and awaiting to be returned; Closed: Item have been found and returned -->
+    <description>Water Bottle</description> <!-- short description of the item lost -->
+
+    <!-- when the item is reported to the lost and found station -->
+    <report:datetime xmlns:report="http://www.w3.org/xml/report/">
+      <report:date year="2019" month="07" date="12" />
+      <report:time hour="14" minute="30" />
+    </report:datetime>
+
+    <!-- when the item is suspected lost -->
+    <lost:datetime xmlns:lost="http://www.w3.org/xml/lost/">
+      <lost:dateFrom year="2019" month="07" date="12" />
+      <lost:dateTo year="2019" month="07" date="12" />
+      <lost:timeFrom hour="11" minute="00" />
+      <lost:timeTo hour="13" minute="00" />
+    </lost:datetime>
+
+    <!-- when the item is being claimed by its owner -->
+    <claim:datetime xmlns:claim="http://www.w3.org/xml/claim/">
+      <claim:date year="" month="" date="" />
+      <claim:time hour="" minute="" />
+    </claim:datetime>
+
+    <!-- where the item is suspected lost -->
+    <locations>
+      <location>MNBR2007</location>
+    </locations>
+
+    <!-- detail description of the item lost -->
+    <detail> <![CDATA[
+   Brand - Tupperware, Colour -Blue, Volume of water - Half empty
+    ]]></detail>
+
+    <!-- item lost is reported by this person -->
+    <reportBy>
+      <name>
+        <firstName>Joseph</firstName>
+        <lastName>Schooling</lastName>
+      </name>
+      <email>joeschooling@yahoo.com</email>
+      <phone>0165486569</phone>
+      <id>115130444</id>
+    </reportBy>
+
+    <!-- item is being found by this person -->
+    <returnBy>
+      <name>
+        <firstName></firstName>
+        <lastName></lastName>
+      </name>
+      <email></email>
+      <phone></phone>
+      <id></id>
+    </returnBy>
+  </item>
+ 
+  <item id="L1006">
+    <status choice="Closed" />
+    <description>Wallet</description>
+
+    <report:datetime xmlns:report="http://www.w3.org/xml/report/">
+      <report:date year="2019" month="07" date="03" />
+      <report:time hour="12" minute="00" />
+    </report:datetime>
+		
+    <lost:datetime xmlns:lost="http://www.w3.org/xml/lost/">
+      <lost:dateFrom year="2019" month="07" date="03" />
+      <lost:dateTo year="2019" month="07" date="03" />
+      <lost:timeFrom hour="10" minute="00" />
+      <lost:timeTo hour="11" minute="50" />
+    </lost:datetime>
+
+    <claim:datetime xmlns:claim="http://www.w3.org/xml/claim/">
+      <claim:date year="2019" month="07" date="10" />
+      <claim:time hour="11" minute="00" />
+    </claim:datetime>
+
+    <locations>
+      <location>ACR1006</location>
+    </locations>
+
+    <detail> <![CDATA[
+    Colour - Grey, Cash - RM10, Driving License - 100100234, CIMB ATM Card, Hong Leong Credit Card
+    ]]></detail>
+
+    <reportBy>
+      <name>
+        <firstName>Kosuke</firstName>
+        <lastName>Hagino</lastName>
+      </name>
+      <email>koshaginojp@yahoo.com</email>
+      <phone>0155587202</phone>
+      <id>1121202121</id>
+    </reportBy>
+
+    <returnBy>
+      <name>
+        <firstName>Frenkie</firstName>
+        <lastName>de Jong</lastName>
+      </name>
+      <email>fdj21@gmail.com</email>
+      <phone>016-6567898</phone>
+      <id>1181104554</id>
+    </returnBy>
+  </item>
+
+  <item id="L1007"> <!-- indicate an item that have been lost; id incidate the primary key -->
+    <status choice="Open" /> <!-- Open: Item is awaiting to be found and returned; Found: Item have been found and awaiting to be returned; Closed: Item have been found and returned -->
+    <description>House Keys</description> <!-- short description of the item lost -->
+
+    <!-- when the item is reported to the lost and found station -->
+    <report:datetime xmlns:report="http://www.w3.org/xml/report/">
+      <report:date year="2019" month="07" date="15" />
+      <report:time hour="16" minute="00" />
+    </report:datetime>
+
+    <!-- when the item is suspected lost -->
+    <lost:datetime xmlns:lost="http://www.w3.org/xml/lost/">
+      <lost:dateFrom year="2019" month="07" date="15" />
+      <lost:dateTo year="2019" month="07" date="15" />
+      <lost:timeFrom hour="08" minute="30" />
+      <lost:timeTo hour="12" minute="00" />
+    </lost:datetime>
+
+    <!-- when the item is being claimed by its owner -->
+    <claim:datetime xmlns:claim="http://www.w3.org/xml/claim/">
+      <claim:date year="" month="" date="" />
+      <claim:time hour="" minute="" />
+    </claim:datetime>
+
+    <!-- where the item is suspected lost -->
+    <locations>
+      <location>ACR3002</location>
+    </locations>
+
+    <!-- detail description of the item lost -->
+    <detail> <![CDATA[
+    Number of Keys - 3, Keychain words - Enjoy Spain
+    ]]></detail>
+
+    <!-- item lost is reported by this person -->
+    <reportBy>
+      <name>
+        <firstName>Aaron</firstName>
+        <lastName>Wan-Bissaka</lastName>
+      </name>
+      <email>spiderwan97@gmail.com</email>
+      <phone>0124202029</phone>
+      <id>1141100420</id>
+    </reportBy>
+
+    <!-- item is being found by this person -->
+    <returnBy>
+      <name>
+        <firstName></firstName>
+        <lastName></lastName>
+      </name>
+      <email></email>
+      <phone></phone>
+      <id></id>
+    </returnBy>
+  </item>
+  
+  <item id="L1008">
+    <status choice="Closed" />
+    <description>Backpack</description>
+
+    <report:datetime xmlns:report="http://www.w3.org/xml/report/">
+      <report:date year="2019" month="07" date="24" />
+      <report:time hour="14" minute="10" />
+    </report:datetime>
+		
+    <lost:datetime xmlns:lost="http://www.w3.org/xml/lost/">
+      <lost:dateFrom year="2019" month="07" date="23" />
+      <lost:dateTo year="2019" month="07" date="24" />
+      <lost:timeFrom hour="18" minute="00" />
+      <lost:timeTo hour="14" minute="00" />
+    </lost:datetime>
+
+    <claim:datetime xmlns:claim="http://www.w3.org/xml/claim/">
+      <claim:date year="2019" month="07" date="26" />
+      <claim:time hour="15" minute="00" />
+    </claim:datetime>
+
+    <locations>
+      <location>Exam Hall</location>
+    </locations>
+
+    <detail> <![CDATA[
+    Colour - Black, Network Security Lecture Notes, Final Year Project drafts, black pencil case, Sony brand powerbank
+    ]]></detail>
+
+    <reportBy>
+      <name>
+        <firstName>Mohammad</firstName>
+        <lastName>Salah</lastName>
+      </name>
+      <email>mosalah29@hotmail.com</email>
+      <phone>0176822910</phone>
+      <id>1181100106</id>
+    </reportBy>
+
+    <returnBy>
+      <name>
+        <firstName>Penny</firstName>
+        <lastName>Oleksiak</lastName>
+      </name>
+      <email>typicalpenny@gmail.com</email>
+      <phone>016-80902454</phone>
+      <id>1141205055</id>
     </returnBy>
   </item>
   
