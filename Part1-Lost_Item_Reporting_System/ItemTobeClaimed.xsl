@@ -44,15 +44,17 @@
   </xsl:template>
 
   <xsl:template match="item">
-    <table class="foundItem">
-      <tr>
-        <th colspan="2"><xsl:apply-templates select="@id" /> - <xsl:apply-templates select="description" /></th>
-      </tr>
-      <tr><xsl:apply-templates select="found:datetime" /></tr>
-      <tr><xsl:apply-templates select="location" /></tr>
-      <tr><xsl:apply-templates select="detail" /></tr>
-      <tr style="height:20px;"></tr>
-    </table>
+    <xsl:if test="status/@choice='Open'">
+      <table class="foundItem">
+        <tr>
+          <th colspan="2"><xsl:apply-templates select="@id" /> - <xsl:apply-templates select="description" /></th>
+        </tr>
+        <tr><xsl:apply-templates select="found:datetime" /></tr>
+        <tr><xsl:apply-templates select="location" /></tr>
+        <tr><xsl:apply-templates select="detail" /></tr>
+        <tr style="height:20px;"></tr>
+      </table>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template match="@id">
