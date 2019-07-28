@@ -128,33 +128,35 @@
 
   <item id="F2002" include="F2003"> <!-- indicate an item that have been found; id incidate the primary key -->
     <status choice="Closed" /> <!-- Open: Item is awaiting to be claimed; Closed: Item have been claimed -->
-    <description>A book with the title, "Sapiens"</description> <!-- short description of the item found -->
+    <description>Book - "Sapiens"</description> <!-- short description of the item found -->
 
     <!-- when the item is reported to the lost and found station -->
     <report:datetime xmlns:report="http://www.w3.org/xml/report/">
-      <report:date year="2019" month="06" date="03" />
+      <report:date year="2019" month="07" date="04" />
       <report:time hour="13" minute="21" />
     </report:datetime>
 
     <!-- when the item is being found by the reporting person -->
     <found:datetime xmlns:found="http://www.w3.org/xml/found/">
-      <found:date year="2019" month="06" date="03" />
-      <found:time hour="14" minute="00" />
+      <found:date year="2019" month="07" date="04" />
+      <found:time hour="13" minute="00" />
     </found:datetime>
 
     <!-- when the item is being claimed by its owner -->
     <claim:datetime xmlns:claim="http://www.w3.org/xml/claim/">
-      <claim:date year="2019" month="06" date="04" />
+      <claim:date year="2019" month="07" date="05" />
       <claim:time hour="11" minute="12" />
     </claim:datetime>
 
     <!-- where the item is being found by the reporting person -->
-    <location>One of the tables on second floor of the library besides a wireless keyboard</location>
+    <location>Library, Second Floor</location>
 
     <!-- detail description of the item found -->
     <detail> <![CDATA[
     A book by Yuval Noah Harari.
     The owner's name is written on the cover of the book -- "Enzo Cheng". 
+    -Besides a wireless keyboard
+    -One of the tables on second floor of the library
     ]]></detail>
 
     <!-- item found is reported by this person -->
@@ -164,7 +166,7 @@
         <lastName>Flower</lastName>
       </name>
       <email>Dflower@hotmail.com</email>
-      <phone>012-9450002</phone>
+      <phone>0129450002</phone>
       <id>1151103434</id>
     </reportBy>
 
@@ -182,35 +184,37 @@
 
   <item id="F2003"> <!-- indicate an item that have been found; id incidate the primary key -->
     <status choice="Closed" /> <!-- Open: Item is awaiting to be claimed; Closed: Item have been claimed -->
-    <description>A wireless keyboard in black color was left on a table in Libaray. 
-    A book was lying beside this keyboard.</description> <!-- short description of the item found -->
+    <description>Wireless Keyboard</description> <!-- short description of the item found -->
 
     <!-- when the item is reported to the lost and found station -->
     <report:datetime xmlns:report="http://www.w3.org/xml/report/">
-      <report:date year="2019" month="07" date="10" />
-      <report:time hour="21" minute="30" />
+      <report:date year="2019" month="07" date="04" />
+      <report:time hour="13" minute="21" />
     </report:datetime>
 
     <!-- when the item is being found by the reporting person -->
     <found:datetime xmlns:found="http://www.w3.org/xml/found/">
-      <found:date year="2019" month="07" date="11" />
-      <found:time hour="10" minute="20" />
+      <found:date year="2019" month="07" date="04" />
+      <found:time hour="13" minute="00" />
     </found:datetime>
 
     <!-- when the item is being claimed by its owner -->
     <claim:datetime xmlns:claim="http://www.w3.org/xml/claim/">
-      <claim:date year="" month="" date="" />
-      <claim:time hour="" minute="" />
+      <claim:date year="2019" month="07" date="05" />
+      <claim:time hour="11" minute="12" />
     </claim:datetime>
 
     <!-- where the item is being found by the reporting person -->
-    <location>One of the tables on second floor of the library</location>
+    <location>Library, Second Floor</location>
 
     <!-- detail description of the item found -->
     <detail> <![CDATA[
-    An Alcatroz 2.4G wireless keyboard was left on one of the table in the new LP last night.
+    An Alcatroz 2.4G wireless keyboard
     Model: AirPad1
-    Has a built-in touch pad
+    Colour: Black
+    -Has a built-in touch pad
+    -A book was lying beside this keyboard.
+    -One of the tables on second floor of the library.
     ]]></detail>
 
        <!-- item found is reported by this person -->
@@ -220,7 +224,7 @@
         <lastName>Flower</lastName>
       </name>
       <email>Dflower@hotmail.com</email>
-      <phone>012-9450002</phone>
+      <phone>0129450002</phone>
       <id>1151103434</id>
     </reportBy>
 
@@ -238,32 +242,33 @@
 
 <item id="F2004"> <!-- indicate an item that have been found; id incidate the primary key -->
     <status choice="Closed" /> <!-- Open: Item is awaiting to be claimed; Closed: Item have been claimed -->
-    <description>A silver scientific calculator with a name tag --"Andrew Wang 1131140099"</description> <!-- short description of the item found -->
+    <description>Scientific Calculator</description> <!-- short description of the item found -->
 
     <!-- when the item is reported to the lost and found station -->
     <report:datetime xmlns:report="http://www.w3.org/xml/report/">
-      <report:date year="2019" month="07" date="01" />
+      <report:date year="2019" month="07" date="05" />
       <report:time hour="14" minute="21" />
     </report:datetime>
 
     <!-- when the item is being found by the reporting person -->
     <found:datetime xmlns:found="http://www.w3.org/xml/found/">
-      <found:date year="2019" month="07" date="01" />
-      <found:time hour="16" minute="13" />
+      <found:date year="2019" month="07" date="05" />
+      <found:time hour="14" minute="13" />
     </found:datetime>
 
     <!-- when the item is being claimed by its owner -->
     <claim:datetime xmlns:claim="http://www.w3.org/xml/claim/">
-      <claim:date year="2019" month="07" date="01" />
+      <claim:date year="2019" month="07" date="05" />
       <claim:time hour="18" minute="00" />
     </claim:datetime>
 
     <!-- where the item is being found by the reporting person -->
-    <location>One of the tables in new LP</location>
+    <location>New LP</location>
 
     <!-- detail description of the item found -->
     <detail> <![CDATA[
     A new scientic calculator with a name tag writting, "Andrew Wong 1131140099" 
+    -Found on one of the tables in new lp
     ]]></detail>
 
     <!-- item found is reported by this person -->
@@ -291,18 +296,18 @@
 
   <item id="F2005"> <!-- indicate an item that have been found; id incidate the primary key -->
     <status choice="Open" /> <!-- Open: Item is awaiting to be claimed; Closed: Item have been claimed -->
-    <description>A brand new portable harddrive in blue color."</description> <!-- short description of the item found -->
+    <description>Portable Harddrive</description> <!-- short description of the item found -->
 
     <!-- when the item is reported to the lost and found station -->
     <report:datetime xmlns:report="http://www.w3.org/xml/report/">
       <report:date year="2019" month="07" date="11" />
-      <report:time hour="13" minute="30" />
+      <report:time hour="15" minute="30" />
     </report:datetime>
 
     <!-- when the item is being found by the reporting person -->
     <found:datetime xmlns:found="http://www.w3.org/xml/found/">
       <found:date year="2019" month="07" date="11" />
-      <found:time hour="15" minute="15" />
+      <found:time hour="13" minute="15" />
     </found:datetime>
 
     <!-- when the item is being claimed by its owner -->
@@ -312,7 +317,7 @@
     </claim:datetime>
 
     <!-- where the item is being found by the reporting person -->
-    <location>In a CLC lecture hall, MSMX3016</location>
+    <location>MSMX3016</location>
 
     <!-- detail description of the item found -->
     <detail> <![CDATA[
@@ -344,7 +349,7 @@
 
   <item id="F2006"> <!-- indicate an item that have been found; id incidate the primary key -->
     <status choice="Closed" /> <!-- Open: Item is awaiting to be claimed; Closed: Item have been claimed -->
-    <description>6 keys with a pink key ring.</description> <!-- short description of the item found -->
+    <description>Keys</description> <!-- short description of the item found -->
 
     <!-- when the item is reported to the lost and found station -->
     <report:datetime xmlns:report="http://www.w3.org/xml/report/">
@@ -354,8 +359,8 @@
 
     <!-- when the item is being found by the reporting person -->
     <found:datetime xmlns:found="http://www.w3.org/xml/found/">
-      <found:date year="2019" month="07" date="12" />
-      <found:time hour="21" minute="15" />
+      <found:date year="2019" month="07" date="15" />
+      <found:time hour="10" minute="15" />
     </found:datetime>
 
     <!-- when the item is being claimed by its owner -->
@@ -365,14 +370,15 @@
     </claim:datetime>
 
     <!-- where the item is being found by the reporting person -->
-    <location>On the floor, beside a chair in gym room.</location>
+    <location>Gym room</location>
 
     <!-- detail description of the item found -->
     <detail> <![CDATA[
     6 six keys chained by a pink key rings was left on the floor of the gym room.
     No name tag is chained with the keys.
     A tag stating --"B-11-03-03", is chained with the keychain ring.
-    I suppose these are house keys.   
+    I suppose these are house keys.
+    On the floor, beside a chair in the gym room
     ]]></detail>
 
     <!-- item found is reported by this person -->
@@ -400,18 +406,18 @@
 
  <item id="F2007"> <!-- indicate an item that have been found; id incidate the primary key -->
     <status choice="Closed" /> <!-- Open: Item is awaiting to be claimed; Closed: Item have been claimed -->
-    <description>A pair of stylish glasses with black color frame</description> <!-- short description of the item found -->
+    <description>Black frame glasses</description> <!-- short description of the item found -->
 
     <!-- when the item is reported to the lost and found station -->
     <report:datetime xmlns:report="http://www.w3.org/xml/report/">
       <report:date year="2019" month="07" date="15" />
-      <report:time hour="15" minute="20" />
+      <report:time hour="16" minute="20" />
     </report:datetime>
 
     <!-- when the item is being found by the reporting person -->
     <found:datetime xmlns:found="http://www.w3.org/xml/found/">
       <found:date year="2019" month="07" date="15" />
-      <found:time hour="16" minute="00" />
+      <found:time hour="15" minute="00" />
     </found:datetime>
 
     <!-- when the item is being claimed by its owner -->
@@ -421,12 +427,14 @@
     </claim:datetime>
 
     <!-- where the item is being found by the reporting person -->
-    <location>Found on a table of the Software Enginnering Lab, MNBR2007</location>
+    <location>Software Enginnering Lab, MNBR2007</location>
 
     <!-- detail description of the item found -->
     <detail> <![CDATA[
     A black frame, stylish pair of glasses. 
     The brand of the frame is called, "Whoosh".   
+    A pair of stylish glasses with black color frame.
+    Found on a table.
     ]]></detail>
 
     <!-- item found is reported by this person -->
@@ -454,18 +462,18 @@
 
  <item id="F2008"> <!-- indicate an item that have been found; id incidate the primary key -->
     <status choice="Open" /> <!-- Open: Item is awaiting to be claimed; Closed: Item have been claimed -->
-    <description>A platinum, heart shaped necklace</description> <!-- short description of the item found -->
+    <description>Heart shaped necklace</description> <!-- short description of the item found -->
 
     <!-- when the item is reported to the lost and found station -->
     <report:datetime xmlns:report="http://www.w3.org/xml/report/">
       <report:date year="2019" month="07" date="17" />
-      <report:time hour="12" minute="20" />
+      <report:time hour="12" minute="40" />
     </report:datetime>
 
     <!-- when the item is being found by the reporting person -->
     <found:datetime xmlns:found="http://www.w3.org/xml/found/">
       <found:date year="2019" month="07" date="17" />
-      <found:time hour="12" minute="40" />
+      <found:time hour="12" minute="20" />
     </found:datetime>
 
     <!-- when the item is being claimed by its owner -->
@@ -475,7 +483,7 @@
     </claim:datetime>
 
     <!-- where the item is being found by the reporting person -->
-    <location>On the sink of the ladies toilet, which was on the ground floor of CLC</location>
+    <location>ladies toilet, CLC ground floor</location>
 
     <!-- detail description of the item found -->
     <detail> <![CDATA[
