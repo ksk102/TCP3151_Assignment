@@ -8,28 +8,79 @@
 <?xml-stylesheet type="text/xsl" href="ListOfLostItem.xsl" ?>
 
 <lostReport>
-  <item id="L1001"> <!-- indicate an item that have been lost; id incidate the primary key -->
-    <status choice="Open" /> <!-- Open: Item is awaiting to be found and returned; Found: Item have been found and awaiting to be returned; Closed: Item have been found and returned -->
+  <item id="L1001" include="L1002">
+    <status choice="Closed" />
+    <description>Wallet</description>
+
+    <report:datetime xmlns:report="http://www.w3.org/xml/report/">
+      <report:date year="2019" month="07" date="03" />
+      <report:time hour="11" minute="59" />
+    </report:datetime>
+		
+    <lost:datetime xmlns:lost="http://www.w3.org/xml/lost/">
+      <lost:dateFrom year="2019" month="07" date="03" />
+      <lost:dateTo year="2019" month="07" date="03" />
+      <lost:timeFrom hour="08" minute="00" />
+      <lost:timeTo hour="11" minute="30" />
+    </lost:datetime>
+
+    <claim:datetime xmlns:claim="http://www.w3.org/xml/claim/">
+      <claim:date year="2019" month="07" date="04" />
+      <claim:time hour="08" minute="04" />
+    </claim:datetime>
+    
+    <locations>
+      <location>MSMX0001</location>
+      <location>CLC Concourse</location>
+    </locations>
+
+    <detail> <![CDATA[
+    Black colour, around RM300 inside, include student id - 1131119882, ic - 950101-01-0001, driving license, and aeon member card
+    ]]></detail>
+
+    <reportBy>
+      <name>
+        <firstName>Kah Siang</firstName>
+        <lastName>Koh</lastName>
+      </name>
+      <email>kahsiang95@hotmail.com</email>
+      <phone>0176815218</phone>
+      <id>1131119882</id>
+    </reportBy>
+
+    <returnBy>
+      <name>
+        <firstName>Daphne</firstName>
+        <lastName>Bunga Dwiputriane</lastName>
+      </name>
+      <email>1151105086@student.mmu.edu.my</email>
+      <phone>0176356898</phone>
+      <id>1151105086</id>
+    </returnBy>
+  </item>
+  
+  <item id="L1002"> <!-- indicate an item that have been lost; id incidate the primary key -->
+    <status choice="Closed" /> <!-- Open: Item is awaiting to be found and returned; Found: Item have been found and awaiting to be returned; Closed: Item have been found and returned -->
     <description>Student ID</description> <!-- short description of the item lost -->
 
     <!-- when the item is reported to the lost and found station -->
     <report:datetime xmlns:report="http://www.w3.org/xml/report/">
-      <report:date year="2019" month="07" date="02" />
-      <report:time hour="17" minute="26" />
+      <report:date year="2019" month="07" date="03" />
+      <report:time hour="11" minute="59" />
     </report:datetime>
 
     <!-- when the item is suspected lost -->
     <lost:datetime xmlns:lost="http://www.w3.org/xml/lost/">
-      <lost:dateFrom year="2019" month="07" date="02" />
-      <lost:dateTo year="2019" month="07" date="02" />
-      <lost:timeFrom hour="14" minute="00" />
-      <lost:timeTo hour="16" minute="00" />
+      <lost:dateFrom year="2019" month="07" date="03" />
+      <lost:dateTo year="2019" month="07" date="03" />
+      <lost:timeFrom hour="08" minute="00" />
+      <lost:timeTo hour="11" minute="30" />
     </lost:datetime>
 
     <!-- when the item is being claimed by its owner -->
     <claim:datetime xmlns:claim="http://www.w3.org/xml/claim/">
-      <claim:date year="" month="" date="" />
-      <claim:time hour="" minute="" />
+      <claim:date year="2019" month="07" date="04" />
+      <claim:time hour="08" minute="04" />
     </claim:datetime>
 
     <!-- where the item is suspected lost -->
@@ -57,61 +108,11 @@
     <!-- item is being found by this person -->
     <returnBy>
       <name>
-        <firstName></firstName>
-        <lastName></lastName>
-      </name>
-      <email></email>
-      <phone></phone>
-      <id></id>
-    </returnBy>
-  </item>
-
-  <item id="L1002">
-    <status choice="Closed" />
-    <description>Wallet</description>
-
-    <report:datetime xmlns:report="http://www.w3.org/xml/report/">
-      <report:date year="2019" month="07" date="03" />
-      <report:time hour="11" minute="59" />
-    </report:datetime>
-		
-    <lost:datetime xmlns:lost="http://www.w3.org/xml/lost/">
-      <lost:dateFrom year="2019" month="07" date="03" />
-      <lost:dateTo year="2019" month="07" date="03" />
-      <lost:timeFrom hour="08" minute="00" />
-      <lost:timeTo hour="11" minute="30" />
-    </lost:datetime>
-
-    <claim:datetime xmlns:claim="http://www.w3.org/xml/claim/">
-      <claim:date year="2019" month="07" date="04" />
-      <claim:time hour="08" minute="04" />
-    </claim:datetime>
-    
-    <locations>
-      <location>MSMX0001</location>
-    </locations>
-
-    <detail> <![CDATA[
-    Black colour, around RM300 inside, include student id - 1151104900, ic - 980101-01-0001, driving license, and aeon member card
-    ]]></detail>
-
-    <reportBy>
-      <name>
-        <firstName>Kean Wah</firstName>
-        <lastName>Cheng</lastName>
-      </name>
-      <email>1151104900@student.mmu.edu.my</email>
-      <phone>0129350714</phone>
-      <id>1151104900</id>
-    </reportBy>
-
-    <returnBy>
-      <name>
         <firstName>Daphne</firstName>
         <lastName>Bunga Dwiputriane</lastName>
       </name>
       <email>1151105086@student.mmu.edu.my</email>
-      <phone>017-6356898</phone>
+      <phone>0176356898</phone>
       <id>1151105086</id>
     </returnBy>
   </item>

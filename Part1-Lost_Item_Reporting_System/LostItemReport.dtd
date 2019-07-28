@@ -26,6 +26,7 @@
 <!ELEMENT id (#PCDATA) >
 
 <!ATTLIST item id ID #REQUIRED >
+<!ATTLIST item include IDREF #IMPLIED>
 <!ATTLIST status choice (Open | Found | Closed) #REQUIRED >
 <!ATTLIST report:datetime xmlns:report CDATA #FIXED "http://www.w3.org/xml/report/">
 <!ATTLIST report:date 
