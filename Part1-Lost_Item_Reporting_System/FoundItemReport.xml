@@ -23,7 +23,7 @@
 <!ELEMENT location (#PCDATA) >
 <!ELEMENT detail (#PCDATA) >
 <!ELEMENT reportBy (name, email, phone, id) >
-<!ELEMENT claimBy (itemLost, name, email, phone, id) >
+<!ELEMENT claimBy (name, email, phone, id) >
 <!ELEMENT name (firstName, lastName) >
 <!ELEMENT firstName (#PCDATA) >
 <!ELEMENT lastName (#PCDATA) >
@@ -170,7 +170,6 @@
 
     <!-- item is being claimed by this person -->
     <claimBy>
-  
       <name>
         <firstName>Enzo</firstName>
         <lastName>Cheng</lastName>
@@ -496,7 +495,7 @@
     </reportBy>
 
     <!-- item is being claimed by this person -->
-    <claimBy>]
+    <claimBy>
       <name>
         <firstName></firstName>
         <lastName></lastName>
