@@ -2,9 +2,11 @@ import java.util.Scanner;
 import java.io.IOException;
 
 class ClassifyHonours{
+  // Native methods
   private native void classifyDiploma(double cgpa);
   private native void classifyDegree(double cgpa);
 
+  // To clear the terminal
   public static void clearScreen(){  
     try {
       new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
@@ -13,6 +15,7 @@ class ClassifyHonours{
     }
   }
 
+  // Header line for the CLI program
   private void displayTitle(){
     System.out.println("Classification of Honours");
     System.out.println("----------------------------------------------------");
@@ -57,6 +60,7 @@ class ClassifyHonours{
     return selection;
   }
 
+  // Get CGPA from user input
   private double getCgpa(Scanner scanner){
     double cgpa;
 
@@ -94,9 +98,12 @@ class ClassifyHonours{
 
     Scanner scanner = new Scanner(System.in);
 
+    // Get user input for qualification
     int selection = classification.getSelection(scanner);
+    // Get user inpur as CGPA
     double cgpa = classification.getCgpa(scanner);
 
+    // avoid resource leak
     scanner.close();
 
     switch(selection){
@@ -109,6 +116,7 @@ class ClassifyHonours{
     }
   }
 
+  // Load library files
   static{
     System.loadLibrary("DiplomaClassification");
     System.loadLibrary("DegreeClassification");
