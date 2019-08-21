@@ -2,8 +2,8 @@ import java.util.Scanner;
 import java.io.IOException;
 
 class ClassifyHonours{
-  private native void classifyDiploma();
-  private native void classifyDegree();
+  private native void classifyDiploma(double cgpa);
+  private native void classifyDegree(double cgpa);
 
   public static void clearScreen(){  
     try {
@@ -57,20 +57,54 @@ class ClassifyHonours{
     return selection;
   }
 
+  private double getCgpa(Scanner scanner){
+    double cgpa;
+
+    System.out.print("Please enter your CGPA: ");
+    // get user's input as cgpa
+    try{
+      cgpa = Double.parseDouble(scanner.nextLine());
+    }
+    // if user input is not a number
+    catch(NumberFormatException e){
+      cgpa = -1;
+    }
+
+    // if the cgpa is not in the valid range, ask the user to re-enter again, until a valid input is inserted
+    while(cgpa < 0 || cgpa > 4){
+      System.out.println();
+      System.out.println("Invalid selection!");
+      System.out.print("Please enter your CGPA (0.00 - 4.00): ");
+
+      // get user's input as cgpa
+      try{
+        cgpa = Double.parseDouble(scanner.nextLine());
+      }
+      // if user input is not a number
+      catch(NumberFormatException e){
+        cgpa = -1;
+      }
+    }
+
+    return cgpa;
+  }
+
   public static void main(String[] args){
     ClassifyHonours classification = new ClassifyHonours();
 
     Scanner scanner = new Scanner(System.in);
 
     int selection = classification.getSelection(scanner);
+    double cgpa = classification.getCgpa(scanner);
+
     scanner.close();
 
     switch(selection){
       case 1:
-        classification.classifyDiploma();
+        classification.classifyDiploma(cgpa);
         break;
       case 2:
-        classification.classifyDegree();
+        classification.classifyDegree(cgpa);
         break;
     }
   }
