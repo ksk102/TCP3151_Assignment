@@ -3,8 +3,8 @@ import java.io.IOException;
 
 class ClassifyHonours{
   // Native methods
-  private native void classifyDiploma(double cgpa);
-  private native void classifyDegree(double cgpa);
+  private native String classifyDiploma(double cgpa);
+  private native String classifyDegree();
 
   // To clear the terminal
   public static void clearScreen(){  
@@ -41,7 +41,6 @@ class ClassifyHonours{
       selection = 0;
     }
     
-
     // if the selection is not 1 or 2, ask the user to re-enter it again until a valid selection is made
     while(selection != 1 && selection != 2){
       System.out.println();
@@ -64,7 +63,7 @@ class ClassifyHonours{
   private double getCgpa(Scanner scanner){
     double cgpa;
 
-    System.out.print("Please enter your CGPA: ");
+    System.out.print("Please enter your current CGPA: ");
     // get user's input as cgpa
     try{
       cgpa = Double.parseDouble(scanner.nextLine());
@@ -94,6 +93,7 @@ class ClassifyHonours{
   }
 
   public static void main(String[] args){
+    String honour = "";
     ClassifyHonours classification = new ClassifyHonours();
 
     Scanner scanner = new Scanner(System.in);
@@ -108,12 +108,17 @@ class ClassifyHonours{
 
     switch(selection){
       case 1:
-        classification.classifyDiploma(cgpa);
+        // return the classification of honour
+        honour = classification.classifyDiploma(cgpa);
         break;
       case 2:
-        classification.classifyDegree(cgpa);
+        // return the classification of honour
+        honour = classification.classifyDegree();
         break;
     }
+
+    // Display the result in command prompt
+    System.out.println("Your are qualified to get \"" + honour + "\" with your current CGPA of " + cgpa + ".");
   }
 
   // Load library files
