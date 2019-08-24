@@ -108,6 +108,12 @@ class ClassifyHonours{
     // avoid resource leak
     scanner.close();
 
+    // if the cgpa is fail
+    if(cgpa < 2){
+      System.out.println("Your are not qualified to get any certificate with your current CGPA of " + cgpa + ".");
+      return;
+    }
+
     switch(selection){
       case 1:
         // return the classification of honour

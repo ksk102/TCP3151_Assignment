@@ -14,9 +14,6 @@ JNIEXPORT jstring JNICALL Java_ClassifyHonours_classifyDiploma(JNIEnv *env, jobj
     else if(cgpa >= 2.0){
         strncpy(honour, "Pass", 15);
     }
-    else{
-        strncpy(honour, "Fail", 15);
-    }
 
     // convert char[] to java.lang.String
     return (*env)->NewStringUTF(env, honour);
