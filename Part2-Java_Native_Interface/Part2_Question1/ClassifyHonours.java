@@ -64,22 +64,14 @@ class ClassifyHonours{
   // Get CGPA from user input
   private double getCgpa(Scanner scanner){
     double cgpa;
+    Boolean error;
+    String decimalError;
 
     System.out.print("Please enter your current CGPA: ");
-    // get user's input as cgpa
-    try{
-      cgpa = Double.parseDouble(scanner.nextLine());
-    }
-    // if user input is not a number
-    catch(NumberFormatException e){
-      cgpa = -1;
-    }
 
-    // if the cgpa is not in the valid range, ask the user to re-enter again, until a valid input is inserted
-    while(cgpa < 0 || cgpa > 4){
-      System.out.println();
-      System.out.println("Invalid selection!");
-      System.out.print("Please enter your CGPA (0.00 - 4.00): ");
+    do{
+      error = false;
+      decimalError = "";
 
       // get user's input as cgpa
       try{
@@ -89,9 +81,35 @@ class ClassifyHonours{
       catch(NumberFormatException e){
         cgpa = -1;
       }
-    }
+
+      // if the cgpa is not in the valid range, ask the user to re-enter again, until a valid input is inserted
+      if(cgpa < 0 || cgpa > 4){
+        error = true;
+      }
+      // if the cgpa inserted is not 2 decimal places
+      else if(!validDecimalPlaces(cgpa, 2)){
+        decimalError = " CGPA must be within 2 decimal places";
+        error = true;
+      }
+      
+      // display error message
+      if(error){
+        System.out.println();
+        System.out.println("Invalid input!" + decimalError);
+        System.out.print("Please enter your CGPA (0.00 - 4.00): ");
+      }
+
+    } while(error);
 
     return cgpa;
+  }
+
+  private Boolean validDecimalPlaces(double number, int places){
+    String text = Double.toString(Math.abs(number));
+    int integerPlaces = text.indexOf('.');
+    int decimalPlaces = text.length() - integerPlaces - 1;
+
+    return (decimalPlaces <= places);
   }
 
   public static void main(String[] args){
