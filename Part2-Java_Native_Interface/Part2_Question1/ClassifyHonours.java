@@ -26,6 +26,7 @@ class ClassifyHonours{
   // get selection of qualification from user
   private int getSelection(Scanner scanner){
     int selection;
+    Boolean error;
     
     // clear the terminal
     ClassifyHonours.clearScreen();
@@ -34,20 +35,10 @@ class ClassifyHonours{
     System.out.println("1. Diploma");
     System.out.println("2. Degree");
     System.out.print("Please select your qualification: ");
-    // get the user's input as selection
-    try{
-      selection = Integer.parseInt(scanner.nextLine());
-    }
-    // if user input is not a number
-    catch(NumberFormatException e){
-      selection = 0;
-    }
-    
-    // if the selection is not 1 or 2, ask the user to re-enter it again until a valid selection is made
-    while(selection != 1 && selection != 2){
-      System.out.println();
-      System.out.println("Invalid selection!");
-      System.out.print("Please select your qualification (1|2): ");
+
+    do{
+      error = false;
+
       // get the user's input as selection
       try{
         selection = Integer.parseInt(scanner.nextLine());
@@ -56,7 +47,16 @@ class ClassifyHonours{
       catch(NumberFormatException e){
         selection = 0;
       }
-    }
+
+      // if the selection is not 1 or 2, ask the user to re-enter it again until a valid selection is made
+      if(selection != 1 && selection != 2){
+        System.out.println();
+        System.out.println("Invalid selection!");
+        System.out.print("Please select your qualification (1|2): ");
+
+        error = true;
+      }
+    } while(error);
 
     return selection;
   }
@@ -96,7 +96,7 @@ class ClassifyHonours{
       if(error){
         System.out.println();
         System.out.println("Invalid input!" + decimalError);
-        System.out.print("Please enter your CGPA (0.00 - 4.00): ");
+        System.out.print("Please enter your current CGPA (0.00 - 4.00): ");
       }
 
     } while(error);
