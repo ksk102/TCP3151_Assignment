@@ -15,6 +15,14 @@ extern "C" {
 JNIEXPORT jstring JNICALL Java_ClassifyHonours_classifyDiploma
   (JNIEnv *, jobject, jdouble);
 
+/*
+ * Class:     ClassifyHonours
+ * Method:    classifyDegree
+ * Signature: ()Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_ClassifyHonours_classifyDegree
+  (JNIEnv *, jobject);
+
 #ifdef __cplusplus
 }
 #endif

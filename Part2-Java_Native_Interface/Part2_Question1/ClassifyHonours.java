@@ -5,6 +5,8 @@ class ClassifyHonours{
   // Native methods
   private native String classifyDiploma(double cgpa);
   private native String classifyDegree();
+  
+  private double jCgpa;
 
   // To clear the terminal
   public static void clearScreen(){  
@@ -112,13 +114,16 @@ class ClassifyHonours{
         honour = classification.classifyDiploma(cgpa);
         break;
       case 2:
+        // just to demostrate another way to get cgpa'value
+        // assign cgpa to instance variable 'jCgpa'
+        classification.jCgpa = cgpa;
         // return the classification of honour
         honour = classification.classifyDegree();
         break;
     }
 
     // Display the result in command prompt
-    System.out.println("Your are qualified to get \"" + honour + "\" with your current CGPA of " + cgpa + ".");
+    System.out.println("Your are qualified to get \"" + honour + "\" certificate with your current CGPA of " + cgpa + ".");
   }
 
   // Load library files

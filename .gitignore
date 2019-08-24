@@ -2,3 +2,5 @@
 *.class
 
 Part2-Java_Native_Interface/.vscode/
+
+*.dll
