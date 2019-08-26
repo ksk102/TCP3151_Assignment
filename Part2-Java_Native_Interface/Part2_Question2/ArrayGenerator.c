@@ -8,7 +8,7 @@
 void GenerateArray(jint *theArray, int length){
   bool numLessThan50 = false;
 
-  printf("Numbers less than 50 in the array: \n");
+  printf("Numbers less than 50 in the array: ");
 
   for(int i = 0; i < length; i++){
     // generate the random numbers

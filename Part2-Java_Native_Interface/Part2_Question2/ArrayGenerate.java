@@ -4,6 +4,7 @@ import java.io.IOException;
 class ArrayGenerate{
   private native void arrayGenerator(int length);
   private native int arrayMinMaxDiff(int[] arrayNumber);
+  private native void arrayMiscellaneous(int[] arrayNumber);
 
   private int arrayNum[];
 
@@ -75,10 +76,15 @@ class ArrayGenerate{
     // calculate the different between the largest and smallest number
     diff = arrayGenerate.arrayMinMaxDiff(arrayGenerate.arrayNum);
     System.out.println("The difference between min and max number is " + diff + ".");
+    System.out.println();
+
+    // extra features for the array
+    arrayGenerate.arrayMiscellaneous(arrayGenerate.arrayNum);
   }
 
   static{
     System.loadLibrary("ArrayGenerator");
     System.loadLibrary("ArrayMinMaxDiff");
+    System.loadLibrary("ArrayMiscellaneous");
   }
 }

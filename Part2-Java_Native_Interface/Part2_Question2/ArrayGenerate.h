@@ -23,6 +23,14 @@ JNIEXPORT void JNICALL Java_ArrayGenerate_arrayGenerator
 JNIEXPORT jint JNICALL Java_ArrayGenerate_arrayMinMaxDiff
   (JNIEnv *, jobject, jintArray);
 
+/*
+ * Class:     ArrayGenerate
+ * Method:    arrayMiscellaneous
+ * Signature: ([I)V
+ */
+JNIEXPORT void JNICALL Java_ArrayGenerate_arrayMiscellaneous
+  (JNIEnv *, jobject, jintArray);
+
 #ifdef __cplusplus
 }
 #endif
