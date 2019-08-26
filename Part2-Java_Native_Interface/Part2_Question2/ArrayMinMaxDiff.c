@@ -5,18 +5,24 @@
 int findMaxNumber(jint theArray[], int length){
   int max;
   int index;
+  int counter;
  
   max = theArray[0];
   index = 0;
+  counter = 1;
  
   for (int i = 1; i < length; i++) {
     if (theArray[i] > max) {
        index = i;
+       counter = 1;
        max = theArray[i];
+    }
+    else if(theArray[i] == max){
+      counter++;
     }
   }
 
-  printf("The Maximum is %d at Index %d\n", max, index);
+  printf("The Maximum is %d, at Index %d, Occurs %d times\n", max, index, counter);
 
   return max;
 }
@@ -24,18 +30,24 @@ int findMaxNumber(jint theArray[], int length){
 int findMinNumber(jint theArray[], int length){
   int min;
   int index;
+  int counter;
  
   min = theArray[0];
   index = 0;
+  counter = 1;
  
   for (int i = 1; i < length; i++) {
     if (theArray[i] < min) {
        index = i;
+       counter = 1;
        min = theArray[i];
+    }
+    else if(theArray[i] == min){
+      counter++;
     }
   }
 
-  printf("The Minimum is %d at Index %d\n", min, index);
+  printf("The Minimum is %d, at Index %d, Occurs %d times\n", min, index, counter);
 
   return min;
 }
