@@ -23,6 +23,7 @@ Classification of Honours for Diploma Programme:
 |Pass                           |2.00 – 2.99         |
 
 Classification of Honours for Degree Programme:
+
 |Classification of Honours      |CGPA                |
 |-------------------------------|--------------------|
 |First                          |3.67 – 4.00         |
