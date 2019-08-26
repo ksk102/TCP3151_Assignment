@@ -66,8 +66,6 @@ class ArrayGenerate{
     arrayGenerate.displayTitle();
     // get the length of the array from user
     arrayLength = arrayGenerate.inputArrayLength(scanner);
-    // avoid resource leak
-    scanner.close();
 
     // generate the array with random numbers
     arrayGenerate.arrayNum = new int[arrayLength];
@@ -80,6 +78,13 @@ class ArrayGenerate{
 
     // extra features for the array
     arrayGenerate.arrayMiscellaneous(arrayGenerate.arrayNum);
+
+    System.out.println();
+    System.out.print("Press any key to continue...");
+    scanner.nextLine();
+
+    // avoid resource leak
+    scanner.close();
   }
 
   static{

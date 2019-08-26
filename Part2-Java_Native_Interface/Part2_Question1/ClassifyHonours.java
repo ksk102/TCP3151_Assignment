@@ -172,6 +172,10 @@ class ClassifyHonours{
       classification.estimateNextGPA(cgpa);
     }
 
+    System.out.println();
+    System.out.print("Press any key to continue...");
+    scanner.nextLine();
+
     // avoid resource leak
     scanner.close();
   }
