@@ -1,6 +1,6 @@
 # Assignment for TCP3151 - Integrative Programming and Technologies
 
-# Part 1 - XML
+## Part 1 - XML
 It is data related to Lost Item Reporting System
 
 These include:
@@ -10,8 +10,8 @@ These include:
 - XSLT to convert the Two XML documents into Two different
 interfaces of HTML documents.
 
-# Part 2 - JNI Programs
-## Question 1
+## Part 2 - JNI Programs
+### Question 1
 To Display the Classification of Honours based on the CGPA and Qualification of the user.
 
 Classification of Honours for Diploma Programme:
@@ -31,6 +31,6 @@ Classification of Honours for Degree Programme:
 |Second Lower                   |2.67 – 3.32         |
 |Third                          |2.00 – 2.66	     |
 
-## Question 2
+### Question 2
 Generate the array with the size given by the user. The array is filled with random number from 1 to 100.  
 After that, from the array find the smallest and largest number, and calculate their difference.
