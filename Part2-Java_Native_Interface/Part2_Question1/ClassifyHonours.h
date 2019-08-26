@@ -23,6 +23,14 @@ JNIEXPORT jstring JNICALL Java_ClassifyHonours_classifyDiploma
 JNIEXPORT jstring JNICALL Java_ClassifyHonours_classifyDegree
   (JNIEnv *, jobject);
 
+/*
+ * Class:     ClassifyHonours
+ * Method:    estimateNextGPA
+ * Signature: (D)V
+ */
+JNIEXPORT void JNICALL Java_ClassifyHonours_estimateNextGPA
+  (JNIEnv *, jobject, jdouble);
+
 #ifdef __cplusplus
 }
 #endif

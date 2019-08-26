@@ -5,6 +5,7 @@ class ClassifyHonours{
   // Native methods
   private native String classifyDiploma(double cgpa);
   private native String classifyDegree();
+  private native void estimateNextGPA(double cgpa);
   
   private double jCgpa;
 
@@ -26,7 +27,7 @@ class ClassifyHonours{
   // get selection of qualification from user
   private int getSelection(Scanner scanner){
     int selection;
-    Boolean error;
+    boolean error;
     
     // clear the terminal
     ClassifyHonours.clearScreen();
@@ -64,7 +65,7 @@ class ClassifyHonours{
   // Get CGPA from user input
   private double getCgpa(Scanner scanner){
     double cgpa;
-    Boolean error;
+    boolean error;
     String decimalError;
 
     System.out.print("Please enter your current CGPA: ");
@@ -104,7 +105,7 @@ class ClassifyHonours{
     return cgpa;
   }
 
-  private Boolean validDecimalPlaces(double number, int places){
+  private boolean validDecimalPlaces(double number, int places){
     String text = Double.toString(Math.abs(number));
     int integerPlaces = text.indexOf('.');
     int decimalPlaces = text.length() - integerPlaces - 1;
@@ -112,47 +113,73 @@ class ClassifyHonours{
     return (decimalPlaces <= places);
   }
 
+  // To calculate the GPA to get for current trimester, given the target CGPA
+  private boolean calculateNextGPA(Scanner scanner){
+    String input;
+
+    System.out.println();
+    System.out.print("Do you wish to calculate the target GPA to get for current trimester? (Y|N): ");
+    // get user's input
+    input = scanner.nextLine();
+    input = input.toUpperCase();
+
+    // if input is not "Y" or "YES", will be evaluate as "N" or false
+    if (input.equals("Y") || input.equals("YES")){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+
   public static void main(String[] args){
     String honour = "";
+    boolean calculateNext = false;
     ClassifyHonours classification = new ClassifyHonours();
 
     Scanner scanner = new Scanner(System.in);
-
     // Get user input for qualification
     int selection = classification.getSelection(scanner);
     // Get user inpur as CGPA
     double cgpa = classification.getCgpa(scanner);
 
-    // avoid resource leak
-    scanner.close();
-
     // if the cgpa is fail
     if(cgpa < 2){
       System.out.println("Your are not qualified to get any certificate with your current CGPA of " + cgpa + ".");
-      return;
+    }
+    else{
+      switch(selection){
+        case 1:
+          // return the classification of honour
+          honour = classification.classifyDiploma(cgpa);
+          break;
+        case 2:
+          // just to demostrate another way to get cgpa'value
+          // assign cgpa to instance variable 'jCgpa'
+          classification.jCgpa = cgpa;
+          // return the classification of honour
+          honour = classification.classifyDegree();
+          break;
+      }
+
+      // Display the result in command prompt
+      System.out.println("Your are qualified to get \"" + honour + "\" certificate with your current CGPA of " + cgpa + ".");
     }
 
-    switch(selection){
-      case 1:
-        // return the classification of honour
-        honour = classification.classifyDiploma(cgpa);
-        break;
-      case 2:
-        // just to demostrate another way to get cgpa'value
-        // assign cgpa to instance variable 'jCgpa'
-        classification.jCgpa = cgpa;
-        // return the classification of honour
-        honour = classification.classifyDegree();
-        break;
+    // To calculate the GPA to get for current trimester, given the target CGPA
+    calculateNext = classification.calculateNextGPA(scanner);
+    if(calculateNext){
+      classification.estimateNextGPA(cgpa);
     }
 
-    // Display the result in command prompt
-    System.out.println("Your are qualified to get \"" + honour + "\" certificate with your current CGPA of " + cgpa + ".");
+    // avoid resource leak
+    scanner.close();
   }
 
   // Load library files
   static{
     System.loadLibrary("DiplomaClassification");
     System.loadLibrary("DegreeClassification");
+    System.loadLibrary("EstimateNextGPA");
   }
 }
