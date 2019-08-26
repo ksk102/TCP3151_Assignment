@@ -15,6 +15,14 @@ extern "C" {
 JNIEXPORT void JNICALL Java_ArrayGenerate_arrayGenerator
   (JNIEnv *, jobject, jint);
 
+/*
+ * Class:     ArrayGenerate
+ * Method:    arrayMinMaxDiff
+ * Signature: ([I)I
+ */
+JNIEXPORT jint JNICALL Java_ArrayGenerate_arrayMinMaxDiff
+  (JNIEnv *, jobject, jintArray);
+
 #ifdef __cplusplus
 }
 #endif

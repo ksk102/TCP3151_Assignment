@@ -26,6 +26,8 @@ void GenerateArray(jint *theArray, int length){
   if(!numLessThan50){
     printf("not found");
   }
+
+  printf("\n");
 }
 
 JNIEXPORT void JNICALL Java_ArrayGenerate_arrayGenerator(JNIEnv *env, jobject object, jint length){

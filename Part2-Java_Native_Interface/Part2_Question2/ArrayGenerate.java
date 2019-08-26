@@ -3,11 +3,12 @@ import java.io.IOException;
 
 class ArrayGenerate{
   private native void arrayGenerator(int length);
+  private native int arrayMinMaxDiff(int[] arrayNumber);
 
   private int arrayNum[];
 
   // To clear the terminal
-  public static void clearScreen(){  
+  public static void clearScreen(){
     try {
       new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
     } 
@@ -56,6 +57,7 @@ class ArrayGenerate{
 
   public static void main(String[] args){
     int arrayLength;
+    int diff;
     ArrayGenerate arrayGenerate = new ArrayGenerate();
     
     Scanner scanner = new Scanner(System.in);
@@ -69,9 +71,14 @@ class ArrayGenerate{
     // generate the array with random numbers
     arrayGenerate.arrayNum = new int[arrayLength];
     arrayGenerate.arrayGenerator(arrayLength);
+
+    // calculate the different between the largest and smallest number
+    diff = arrayGenerate.arrayMinMaxDiff(arrayGenerate.arrayNum);
+    System.out.println("The difference between min and max number is " + diff + ".");
   }
 
   static{
     System.loadLibrary("ArrayGenerator");
+    System.loadLibrary("ArrayMinMaxDiff");
   }
 }
