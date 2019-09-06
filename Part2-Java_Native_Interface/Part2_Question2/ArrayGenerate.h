@@ -10,9 +10,9 @@ extern "C" {
 /*
  * Class:     ArrayGenerate
  * Method:    arrayGenerator
- * Signature: (I)V
+ * Signature: (I)[I
  */
-JNIEXPORT void JNICALL Java_ArrayGenerate_arrayGenerator
+JNIEXPORT jintArray JNICALL Java_ArrayGenerate_arrayGenerator
   (JNIEnv *, jobject, jint);
 
 /*

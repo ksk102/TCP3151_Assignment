@@ -30,8 +30,12 @@ void GenerateArray(jint *theArray, int length){
   printf("\n");
 }
 
-JNIEXPORT void JNICALL Java_ArrayGenerate_arrayGenerator(JNIEnv *env, jobject object, jint length){
+JNIEXPORT jintArray JNICALL Java_ArrayGenerate_arrayGenerator(JNIEnv *env, jobject object, jint length){
+  // c array
   jint randomNumber[length];
+  // create a new java array
+  jintArray javaArray;
+  javaArray = (*env)->NewIntArray(env, length);
 
   // Use current time as seed for random generator 
   srand(time(0)); 
@@ -39,11 +43,8 @@ JNIEXPORT void JNICALL Java_ArrayGenerate_arrayGenerator(JNIEnv *env, jobject ob
   // generate the array
   GenerateArray(randomNumber, length);
 
-  // link with java class, to get java array field
-  jclass clazz = (*env)->GetObjectClass(env, object);
-  jfieldID fid = (*env)->GetFieldID(env, clazz, "arrayNum", "[I");
-  jintArray javaArray = (*env)->GetObjectField(env, object, fid);
-
   // copy the native array to java array
   (*env)->SetIntArrayRegion(env, javaArray, 0, length, randomNumber);
+
+  return javaArray;
 }
